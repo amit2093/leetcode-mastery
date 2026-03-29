@@ -1,5 +1,7 @@
 package com.amit.sliding_window;
 
+import com.amit.common.LeetCodeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -11,6 +13,19 @@ import java.util.Map;
  * Space Complexity: O(min(m, n)) where m is the size of the alphabet
  */
 public class LC003_LongestSubstringWithoutRepeatingCharacters_SlidingWindow {
+
+    public static void main(String[] args) {
+        var sol = new LC003_LongestSubstringWithoutRepeatingCharacters_SlidingWindow();
+        String s = "abcabcbb";
+
+        System.out.println("\n--- LC 003: Longest Substring ---");
+        LeetCodeUtils.measureTime(() -> {
+            int result = sol.lengthOfLongestSubstring(s);
+            System.out.println("Sample Input: \"abcabcbb\"");
+            System.out.println("Expected: 3 | Actual: " + result);
+        });
+    }
+
     public int lengthOfLongestSubstring(String s) {
         int n = s.length();
         int maxLength = 0;

@@ -1,5 +1,7 @@
 package com.amit.sliding_window;
 
+import com.amit.common.LeetCodeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +15,18 @@ import java.util.Map;
  * Notes: this is like find the longest subarray with at most 2 distinct elements
  */
 public class LC904_FruitIntoBaskets_SlidingWindow {
+
+    public static void main(String[] args) {
+        var sol = new LC904_FruitIntoBaskets_SlidingWindow();
+        int[] fruits = {1, 2, 3, 2, 2};
+
+        System.out.println("\n--- LC 904: Fruit Into Baskets ---");
+        LeetCodeUtils.measureTime(() -> {
+            int result = sol.totalFruit(fruits);
+            System.out.println("Sample Input: [1, 2, 3, 2, 2]");
+            System.out.println("Expected: 4 | Actual: " + result);
+        });
+    }
 
     public int totalFruit(int[] fruits) {
         int left = 0, maxFruits = 0;

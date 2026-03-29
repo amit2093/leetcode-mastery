@@ -60,12 +60,12 @@ public class LeetCodeUtils {
      * Measure execution time of a piece of code (for performance testing)
      *
      * Use it like this:
-     * LeetCodeUtils.timeTaken(() -> {
+     * LeetCodeUtils.measureTime(() -> {
      *     int result = classObject.lengthOfLongestSubstring(testInput);
      *     System.out.println("Result: " + result);
      * });
      */
-    public static void timeTaken(Runnable task) {
+    public static void measureTime(Runnable task) {
         long start = System.nanoTime();
         task.run();
         long end = System.nanoTime();

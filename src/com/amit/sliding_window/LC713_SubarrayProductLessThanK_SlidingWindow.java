@@ -1,5 +1,7 @@
 package com.amit.sliding_window;
 
+import com.amit.common.LeetCodeUtils;
+
 /**
  * Problem: 713. Subarray Product Less Than K
  * Difficulty: Medium
@@ -10,6 +12,19 @@ package com.amit.sliding_window;
  * Notes: This is a Flexible Sliding Window problem where the "shrink" condition is the product being greater than or equal to k
  */
 public class LC713_SubarrayProductLessThanK_SlidingWindow {
+
+    public static void main(String[] args) {
+        var sol = new LC713_SubarrayProductLessThanK_SlidingWindow();
+        int[] nums = {10, 5, 2, 6};
+        int k = 100;
+
+        System.out.println("\n--- LC 713: Subarray Product < K ---");
+        LeetCodeUtils.measureTime(() -> {
+            int result = sol.numSubarrayProductLessThanK(nums, k);
+            System.out.println("Sample Input: [10, 5, 2, 6], k=100");
+            System.out.println("Expected: 8 | Actual: " + result);
+        });
+    }
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {
         // Edge case: if k is 0 or 1, no product of positive integers can be < k

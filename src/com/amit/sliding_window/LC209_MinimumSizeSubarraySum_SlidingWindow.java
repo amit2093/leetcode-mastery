@@ -1,6 +1,8 @@
 package com.amit.sliding_window;
 
 
+import com.amit.common.LeetCodeUtils;
+
 /**
  * Problem: 209. Minimum Size Subarray Sum
  * Difficulty: Medium
@@ -12,6 +14,20 @@ package com.amit.sliding_window;
  */
 
 public class LC209_MinimumSizeSubarraySum_SlidingWindow {
+
+    public static void main(String[] args) {
+        var sol = new LC209_MinimumSizeSubarraySum_SlidingWindow();
+        int target = 7;
+        int[] nums = {2, 3, 1, 2, 4, 3};
+
+        System.out.println("\n--- LC 209: Min Size Subarray Sum ---");
+        LeetCodeUtils.measureTime(() -> {
+            int result = sol.minSubArrayLen(target, nums);
+            System.out.println("Sample Input: target=7, nums=[2, 3, 1, 2, 4, 3]");
+            System.out.println("Expected: 2 | Actual: " + result);
+        });
+    }
+
     public int minSubArrayLen(int target, int[] nums) {
         int left = 0;
         int currentSum = 0;
