@@ -2,6 +2,8 @@ package com.amit.sliding_window;
 
 import com.amit.common.LeetCodeUtils;
 
+import java.util.Arrays;
+
 /**
  * Problem: 1004. Max Consecutive Ones III
  * Difficulty: Medium
@@ -18,12 +20,10 @@ public class LC1004_MaxConsecutiveOnesIII_SlidingWindow {
         int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k = 2;
 
-        System.out.println("\n--- LC 1004: Max Consecutive Ones III ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.longestOnes(nums, k);
-            System.out.println("Sample Input: [1,1,1,0,0,0,1,1,1,1,0], k=2");
-            System.out.println("Expected: 6 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                6,
+                () -> sol.longestOnes(nums, k)
+        );
     }
 
     public int longestOnes(int[] nums, int k) {

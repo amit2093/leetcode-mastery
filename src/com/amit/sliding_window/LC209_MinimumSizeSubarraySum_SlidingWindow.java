@@ -1,7 +1,10 @@
 package com.amit.sliding_window;
 
 
+import com.amit.User;
 import com.amit.common.LeetCodeUtils;
+
+import java.util.Arrays;
 
 /**
  * Problem: 209. Minimum Size Subarray Sum
@@ -18,17 +21,14 @@ public class LC209_MinimumSizeSubarraySum_SlidingWindow {
     public static void main(String[] args) {
         var sol = new LC209_MinimumSizeSubarraySum_SlidingWindow();
         int target = 7;
-        int[] nums = {2, 3, 1, 2, 4, 3};
-
-        System.out.println("\n--- LC 209: Min Size Subarray Sum ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.minSubArrayLen(target, nums);
-            System.out.println("Sample Input: target=7, nums=[2, 3, 1, 2, 4, 3]");
-            System.out.println("Expected: 2 | Actual: " + result);
-        });
+        int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        String name = "Amit Arunita Saxena";
+        boolean bool = true;
+        User user = new User("Amit", "Barclays", new User("Arunita", "Google", null));
+        LeetCodeUtils.runTest(2, () -> sol.minSubArrayLen(target, nums, user, name, bool));
     }
 
-    public int minSubArrayLen(int target, int[] nums) {
+    public int minSubArrayLen(int target, int[] nums, User user, String name, boolean bool) {
         int left = 0;
         int currentSum = 0;
         int minLength = Integer.MAX_VALUE;

@@ -2,6 +2,8 @@ package com.amit.sliding_window;
 
 import com.amit.common.LeetCodeUtils;
 
+import java.util.Arrays;
+
 /**
  * Problem: 643. Maximum Average Subarray I
  * Difficulty: Easy
@@ -15,12 +17,10 @@ public class LC643_MaximumAverageSubarray_SlidingWindow {
         int[] nums = {1, 12, -5, -6, 50, 3};
         int k = 4;
 
-        System.out.println("--- LC 643: Max Average Subarray I ---");
-        LeetCodeUtils.measureTime(() -> {
-            double result = sol.findMaxAverage(nums, k);
-            System.out.println("Sample Input: [1, 12, -5, -6, 50, 3], k=4");
-            System.out.println("Expected: 12.75 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                12.75,
+                () -> sol.findMaxAverage(nums, k)
+        );
     }
 
     public double findMaxAverage(int[] nums, int k) {

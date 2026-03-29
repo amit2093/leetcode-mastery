@@ -18,12 +18,10 @@ public class LC003_LongestSubstringWithoutRepeatingCharacters_SlidingWindow {
         var sol = new LC003_LongestSubstringWithoutRepeatingCharacters_SlidingWindow();
         String s = "abcabcbb";
 
-        System.out.println("\n--- LC 003: Longest Substring ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.lengthOfLongestSubstring(s);
-            System.out.println("Sample Input: \"abcabcbb\"");
-            System.out.println("Expected: 3 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                3,
+                () -> sol.lengthOfLongestSubstring(s)
+        );
     }
 
     public int lengthOfLongestSubstring(String s) {

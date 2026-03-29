@@ -2,6 +2,8 @@ package com.amit.sliding_window;
 
 import com.amit.common.LeetCodeUtils;
 
+import java.util.Arrays;
+
 /**
  * Problem: 713. Subarray Product Less Than K
  * Difficulty: Medium
@@ -18,12 +20,10 @@ public class LC713_SubarrayProductLessThanK_SlidingWindow {
         int[] nums = {10, 5, 2, 6};
         int k = 100;
 
-        System.out.println("\n--- LC 713: Subarray Product < K ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.numSubarrayProductLessThanK(nums, k);
-            System.out.println("Sample Input: [10, 5, 2, 6], k=100");
-            System.out.println("Expected: 8 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                8,
+                () -> sol.numSubarrayProductLessThanK(nums, k)
+        );
     }
 
     public int numSubarrayProductLessThanK(int[] nums, int k) {

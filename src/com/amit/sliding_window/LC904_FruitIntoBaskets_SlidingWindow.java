@@ -2,6 +2,7 @@ package com.amit.sliding_window;
 
 import com.amit.common.LeetCodeUtils;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -20,12 +21,10 @@ public class LC904_FruitIntoBaskets_SlidingWindow {
         var sol = new LC904_FruitIntoBaskets_SlidingWindow();
         int[] fruits = {1, 2, 3, 2, 2};
 
-        System.out.println("\n--- LC 904: Fruit Into Baskets ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.totalFruit(fruits);
-            System.out.println("Sample Input: [1, 2, 3, 2, 2]");
-            System.out.println("Expected: 4 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                4,
+                () -> sol.totalFruit(fruits)
+        );
     }
 
     public int totalFruit(int[] fruits) {

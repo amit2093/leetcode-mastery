@@ -1,6 +1,11 @@
 package com.amit.sliding_window;
 
 import com.amit.common.LeetCodeUtils;
+import com.amit.common.TreeNode;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 /**
  * Problem: 1248. Count Number of Nice Subarrays
@@ -18,12 +23,10 @@ public class LC1248_CountNumberOfNiceSubarrays_SlidingWindow {
         int[] nums = {1, 1, 2, 1, 1};
         int k = 3;
 
-        System.out.println("\n--- LC 1248: Count Nice Subarrays ---");
-        LeetCodeUtils.measureTime(() -> {
-            int result = sol.numberOfSubarrays(nums, k);
-            System.out.println("Sample Input: [1, 1, 2, 1, 1], k=3");
-            System.out.println("Expected: 2 | Actual: " + result);
-        });
+        LeetCodeUtils.runTest(
+                2,
+                () -> sol.numberOfSubarrays(nums, k)
+        );
     }
 
     public int numberOfSubarrays(int[] nums, int k) {
@@ -48,3 +51,48 @@ public class LC1248_CountNumberOfNiceSubarrays_SlidingWindow {
         return res;
     }
 }
+
+/*
+
+public static TreeNode stringToTreeNode(String input) {
+    input = input.trim();
+    input = input.substring(1, input.length() - 1);
+    if (input.length() == 0) return null;
+
+    String[] parts = input.split(",");
+    String item = parts[0].trim();
+    TreeNode root = new TreeNode(Integer.parseInt(item));
+    Queue<TreeNode> nodeQueue = new LinkedList<>();
+    nodeQueue.add(root);
+
+    int index = 1;
+    while (!nodeQueue.isEmpty()) {
+        TreeNode node = nodeQueue.remove();
+
+        if (index == parts.length) break;
+
+        item = parts[index++].trim();
+        if (!item.equals("null")) {
+            int leftNumber = Integer.parseInt(item);
+            node.left = new TreeNode(leftNumber);
+            nodeQueue.add(node.left);
+        }
+
+        if (index == parts.length) break;
+
+        item = parts[index++].trim();
+        if (!item.equals("null")) {
+            int rightNumber = Integer.parseInt(item);
+            node.right = new TreeNode(rightNumber);
+            nodeQueue.add(node.right);
+        }
+    }
+    return root;
+}
+
+    public static void printMatrix(int[][] matrix) {
+        for (int[] row : matrix) {
+            System.out.println(Arrays.toString(row));
+        }
+    }
+ */
