@@ -1,8 +1,6 @@
-package com.amit.sliding_window;
+package leetcode.sliding_window;
 
-import com.amit.common.LeetCodeUtils;
-
-import java.util.Arrays;
+import leetcode.arrays.common.LeetCodeUtils;
 
 /**
  * Problem: 643. Maximum Average Subarray I

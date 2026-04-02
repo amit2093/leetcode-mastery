@@ -1,4 +1,4 @@
-package com.amit.common;
+package leetcode.common;
 
 import java.io.File;
 import java.lang.reflect.Field;

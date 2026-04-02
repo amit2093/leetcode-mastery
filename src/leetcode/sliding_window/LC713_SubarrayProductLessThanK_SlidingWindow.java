@@ -1,10 +1,6 @@
-package com.amit.sliding_window;
+package leetcode.sliding_window;
 
-import com.amit.common.LeetCodeUtils;
-
-import java.util.Arrays;
-
-import static com.amit.common.LeetCodeUtils.runTest;
+import static leetcode.arrays.common.LeetCodeUtils.runTest;
 
 /**
  * Problem: 713. Subarray Product Less Than K

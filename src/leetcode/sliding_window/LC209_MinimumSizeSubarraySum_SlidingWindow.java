@@ -1,8 +1,8 @@
-package com.amit.sliding_window;
+package leetcode.sliding_window;
 
 
 import com.amit.User;
-import com.amit.common.LeetCodeUtils;
+import leetcode.arrays.common.LeetCodeUtils;
 
 /**
  * Problem: 209. Minimum Size Subarray Sum

@@ -1,4 +1,4 @@
-package com.amit.common;
+package leetcode.common;
 
 /**
  * Standard definition for singly-linked list node.

@@ -1,4 +1,4 @@
-package com.amit.prefix_sum;
+package leetcode.prefix_sum;
 
 /**
  * Problem: 724. Find Pivot Index

@@ -1,6 +1,6 @@
-package com.amit.sliding_window;
+package leetcode.sliding_window;
 
-import com.amit.common.LeetCodeUtils;
+import leetcode.arrays.common.LeetCodeUtils;
 
 import java.util.HashMap;
 import java.util.Map;

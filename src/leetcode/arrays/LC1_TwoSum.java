@@ -1,9 +1,9 @@
-package com.amit.arrays;
+package leetcode.arrays;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static com.amit.common.LeetCodeUtils.runTest;
+import static leetcode.arrays.common.LeetCodeUtils.runTest;
 
 /**
  * Problem: 1. Two Sum

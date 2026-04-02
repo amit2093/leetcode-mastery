@@ -1,11 +1,6 @@
-package com.amit.sliding_window;
+package leetcode.sliding_window;
 
-import com.amit.common.LeetCodeUtils;
-import com.amit.common.TreeNode;
-
-import java.util.Arrays;
-import java.util.LinkedList;
-import java.util.Queue;
+import leetcode.arrays.common.LeetCodeUtils;
 
 /**
  * Problem: 1248. Count Number of Nice Subarrays
