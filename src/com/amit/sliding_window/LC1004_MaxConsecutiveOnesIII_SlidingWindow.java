@@ -17,7 +17,7 @@ public class LC1004_MaxConsecutiveOnesIII_SlidingWindow {
 
     public static void main(String[] args) {
         var sol = new LC1004_MaxConsecutiveOnesIII_SlidingWindow();
-        int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
+        int[] nums = {1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0};
         int k = 2;
 
         LeetCodeUtils.runTest(
