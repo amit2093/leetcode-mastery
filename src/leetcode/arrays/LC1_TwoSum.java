@@ -3,7 +3,7 @@ package leetcode.arrays;
 import java.util.HashMap;
 import java.util.Map;
 
-import static leetcode.arrays.common.LeetCodeUtils.runTest;
+import static leetcode.common.LeetCodeUtils.runTest;
 
 /**
  * Problem: 1. Two Sum

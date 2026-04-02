@@ -1,6 +1,6 @@
 package leetcode.sliding_window;
 
-import leetcode.arrays.common.LeetCodeUtils;
+import leetcode.common.LeetCodeUtils;
 
 /**
  * Problem: 1004. Max Consecutive Ones III

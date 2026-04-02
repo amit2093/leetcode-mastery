@@ -1,8 +1,6 @@
 package leetcode.sliding_window;
 
-
-import com.amit.User;
-import leetcode.arrays.common.LeetCodeUtils;
+import leetcode.common.LeetCodeUtils;
 
 /**
  * Problem: 209. Minimum Size Subarray Sum
@@ -22,13 +20,10 @@ public class LC209_MinimumSizeSubarraySum_SlidingWindow {
         var sol = new LC209_MinimumSizeSubarraySum_SlidingWindow();
         int target = 7;
         int[] nums = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-        String name = "Amit Arunita Saxena";
-        boolean bool = true;
-        User user = new User("Amit", "Barclays", new User("Arunita", "Google", null));
-        LeetCodeUtils.runTest(2, () -> sol.minSubArrayLen(target, nums, user, name, bool));
+        LeetCodeUtils.runTest(2, () -> sol.minSubArrayLen(target, nums));
     }
 
-    public int minSubArrayLen(int target, int[] nums, User user, String name, boolean bool) {
+    public int minSubArrayLen(int target, int[] nums) {
         int left = 0;
         int currentSum = 0;
         int minLength = Integer.MAX_VALUE;

@@ -1,6 +1,6 @@
 package leetcode.prefix_sum;
 
-import static leetcode.arrays.common.LeetCodeUtils.runTest;
+import static leetcode.common.LeetCodeUtils.runTest;
 
 /**
  * Problem: 238. Product of Array Except Self

@@ -1,6 +1,6 @@
 package leetcode.sliding_window;
 
-import static leetcode.arrays.common.LeetCodeUtils.runTest;
+import static leetcode.common.LeetCodeUtils.runTest;
 
 /**
  * Problem: 713. Subarray Product Less Than K
