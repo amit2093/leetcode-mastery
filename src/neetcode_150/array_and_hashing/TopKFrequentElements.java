@@ -2,7 +2,9 @@ package neetcode_150.array_and_hashing;
 
 import leetcode.common.LeetCodeUtils;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class TopKFrequentElements {
@@ -20,17 +22,31 @@ public class TopKFrequentElements {
     }
 
     public int[] topKFrequent(int[] nums, int k) {
-        int[] res = new int[k];
+        List<Integer>[] buckets = new List[nums.length + 1];
 
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> frequencyMap = new HashMap<>();
         for (int num : nums) {
-            map.put(num, map.getOrDefault(num, 0) + 1);
+            frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
 
-
-        for (int i = 0; i < k; i++) {
-            res[i] = map.getOrDefault(nums[i], 0);
+        for (int element : frequencyMap.keySet()) {
+            int frequency = frequencyMap.get(element);
+            if (buckets[frequency] == null) {
+                buckets[frequency] = new ArrayList<>();
+            }
+            buckets[frequency].add(element);
         }
+
+        int[] res = new int[k];
+        int counter = 0;
+        for (int position = buckets.length - 1; position >= 0 && counter < k; position--) {
+            if (buckets[position] != null) {
+                for (int element : buckets[position]) {
+                    res[counter++] = element;
+                }
+            }
+        }
+
         return res;
     }
 }
