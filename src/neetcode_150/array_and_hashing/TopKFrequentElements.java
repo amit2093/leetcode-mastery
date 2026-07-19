@@ -13,7 +13,7 @@ public class TopKFrequentElements {
         var solution = new TopKFrequentElements();
         int[] nums = {1,2,2,3,3,3};
         int k = 2;
-        int[] output = {2,3};
+        int[] output = {3,2};
 
         LeetCodeUtils.runTest(
                 output,
