@@ -1,4 +1,4 @@
-package neetcode_150.array_and_hashing;
+package NeetCode_250.array_and_hashing;
 
 import leetcode.common.LeetCodeUtils;
 
