@@ -24,11 +24,13 @@ public class TopKFrequentElements {
     public int[] topKFrequent(int[] nums, int k) {
         List<Integer>[] buckets = new List[nums.length + 1];
 
+        // find frequency of each element
         Map<Integer, Integer> frequencyMap = new HashMap<>();
         for (int num : nums) {
             frequencyMap.put(num, frequencyMap.getOrDefault(num, 0) + 1);
         }
 
+        // create buckets of each frequency (bucket will contain element of that frequency)
         for (int element : frequencyMap.keySet()) {
             int frequency = frequencyMap.get(element);
             if (buckets[frequency] == null) {
@@ -37,6 +39,7 @@ public class TopKFrequentElements {
             buckets[frequency].add(element);
         }
 
+        // find top k elements
         int[] res = new int[k];
         int counter = 0;
         for (int position = buckets.length - 1; position >= 0 && counter < k; position--) {
