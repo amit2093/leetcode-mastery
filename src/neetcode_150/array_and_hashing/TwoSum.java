@@ -22,14 +22,11 @@ public class TwoSum {
         int[] res = new int[2];
         HashMap<Integer, Integer> map = new HashMap<>();
 
-        for (int i = 0; i < nums.length; i++) {
-            if(map.containsKey(target - nums[i])){
-                return new int[] {
-                        map.get(target - nums[i]),
-                        i
-                };
+        for (int index = 0; index < nums.length; index++) {
+            if(map.containsKey(target - nums[index])){
+                return new int[] {map.get(target - nums[index]), index};
             }
-            map.put(nums[i], i);
+            map.put(nums[index], index);
         }
 
         return res;
