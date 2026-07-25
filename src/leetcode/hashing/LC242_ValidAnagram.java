@@ -27,7 +27,8 @@ public class LC242_ValidAnagram {
 
         for(int i = 0; i < t.length(); i++){
             map.put(t.charAt(i), map.getOrDefault(t.charAt(i), 0) - 1);
-            if (map.get(t.charAt(i)) == 0) map.remove(t.charAt(i));
+            if (map.get(t.charAt(i)) == 0)
+                map.remove(t.charAt(i));
         }
 
         return map.isEmpty();
