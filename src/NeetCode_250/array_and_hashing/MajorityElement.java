@@ -9,15 +9,15 @@ public class MajorityElement {
 
     public static int majorityElement(int[] nums) {
         int count = 0;
-        int candidate = 0;
+        int current = 0;
 
         for (int num : nums) {
             if (count == 0) {
-                candidate = num;
+                current = num;
             }
-            count += (num == candidate) ? 1 : -1;
+            count += (num == current) ? 1 : -1;
         }
 
-        return candidate;
+        return current;
     }
 }
