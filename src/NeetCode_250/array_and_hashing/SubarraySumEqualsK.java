@@ -1,9 +1,20 @@
 package NeetCode_250.array_and_hashing;
 
+import leetcode.common.LeetCodeUtils;
+
 import java.util.HashMap;
 import java.util.Map;
 
 public class SubarraySumEqualsK {
+
+    public static void main(String[] args) {
+        var solution = new SubarraySumEqualsK();
+
+        LeetCodeUtils.runTest(
+                4,
+                () -> solution.optimized(new int[] {2, -1, 1, 2}, 2)
+        );
+    }
 
     // nums = 2,-1,1,2, k = 2
     public int bruteForce(int[] nums, int k) {
@@ -21,7 +32,7 @@ public class SubarraySumEqualsK {
         return result;
     }
 
-        // nums = [2,-1,1,2], k = 2
+        // nums = [2,-1,1,2], k = 2, ans = 4
         // this method is far more optimized version of prefixSum approach
         // I am not maintaining prefix sum array
         // But I am maintaining prefix sum array like element into "sum" variable
