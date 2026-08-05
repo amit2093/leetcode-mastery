@@ -45,7 +45,10 @@ public class MajorityElement {
      *
      * What Misra-Gries gives you.
      * Fixed memory, chosen up front. Want the accounts exceeding 1% of traffic? k = 100, so you keep 99 counters. Not 200 million. Ninety-nine.
-     * The guarantee is one-sided and precise: every element that truly appears more than n/k times is in your final set. There is no false negative. You may also carry some elements that don't qualify, and each stored count may undercount the true count by at most n/k. So you do one verification pass, or accept the approximation, depending on whether you can afford a second read.
+     * The guarantee is one-sided and precise: every element that truly appears more than n/k times is in your final set.
+     * There is no false negative.
+     * You may also carry some elements that don't qualify, and each stored count may undercount the true count by at most n/k.
+     * So you do one verification pass, or accept the approximation, depending on whether you can afford a second read.
      * That's the trade you're announcing to the interviewer: I gave up exactness and I got a hard memory bound, and here is precisely what I gave up.
      */
     public int theMisraGries(int[] nums) {
