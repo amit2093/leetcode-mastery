@@ -1,4 +1,4 @@
-package neetcode.Arrays_Hashing;
+package NeetCode_250.Arrays_Hashing;
 
 public class DesignHashMap_____ {
 }
