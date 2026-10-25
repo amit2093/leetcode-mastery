@@ -1,6 +1,6 @@
 package LLD.DocumentEditor.services;
 
-import LLD.DocumentEditor.interfaces.Element;
+import LLD.DocumentEditor.services.element_service.Element;
 
 import java.util.List;
 

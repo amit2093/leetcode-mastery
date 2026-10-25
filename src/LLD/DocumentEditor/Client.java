@@ -1,8 +1,12 @@
 package LLD.DocumentEditor;
 
-import LLD.DocumentEditor.interfaces.Element;
-import LLD.DocumentEditor.interfaces.Persistence;
+import LLD.DocumentEditor.services.data_save_service.SaveToFile;
+import LLD.DocumentEditor.services.element_service.Element;
+import LLD.DocumentEditor.services.data_save_service.Persistence;
 import LLD.DocumentEditor.services.*;
+import LLD.DocumentEditor.services.element_service.ImageElement;
+import LLD.DocumentEditor.services.element_service.TabElement;
+import LLD.DocumentEditor.services.element_service.TextElement;
 
 public class Client {
 
